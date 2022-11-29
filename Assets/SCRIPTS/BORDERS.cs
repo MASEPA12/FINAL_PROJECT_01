@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BORDERS : MonoBehaviour
 {
+    //no és necessàri perquè es mapa no és quadrat
+
     private float Xrange = 2.9f; //front-back
     private float Zrange = 2.4f; //left-right
 
-    // Update is called once per frame
     void Update()
     {
         inScreen();

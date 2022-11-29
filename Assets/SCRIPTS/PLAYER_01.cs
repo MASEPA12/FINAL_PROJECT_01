@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class PLAYER_01 : MonoBehaviour
 {
+    /*coses que he de posar
+     * 1- moviment en vertical (fletxa adalt i fletxa abaix)
+     * 2- rotació en horitzontal (fletxa dreta i esquerra)
+     */
 
-    private float speed = 2f;
-    private float turnSpeed = 10f;
-    private float horitzontalInput;
+    private float speed = 15f;
+    private float turnSpeed = 100f;
+    private float rotationInput;
     private float verticalInput;
     private float jumpInput;
 
     void Update()
     {
         verticalInput = Input.GetAxis("Vertical"); //movement front/back
-        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput); 
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
 
-        transform.Rotate(Vector3.forward * turnSpeed * Time.deltaTime * horitzontalInput); //rotation
-
-        horitzontalInput = Input.GetAxis("Horizontal"); //movement left/right
-        transform.Translate(Vector3.right * speed * Time.deltaTime * horitzontalInput);
-        
-        jumpInput = Input.GetAxis("Jump"); //movement for jump
-        transform.Translate(Vector3.up * speed * Time.deltaTime * jumpInput);
+        rotationInput = Input.GetAxis("Horizontal");
+        transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * rotationInput); //rotation
     }
 }
