@@ -13,7 +13,7 @@ public class PLAYER_01 : MonoBehaviour
     private float turnSpeed = 100f;
     private float rotationInput;
     private float verticalInput;
-    private float jumpInput;
+    //private float jumpInput;
 
     void Update()
     {

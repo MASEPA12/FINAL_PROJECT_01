@@ -11,12 +11,12 @@ public class BORDERS : MonoBehaviour
 
     void Update()
     {
-        inScreen();
+       // inScreen();
     }
 
     private void inScreen()
     {
-        Vector3 position = transform.position;
+       /* Vector3 position = transform.position;
 
         if (position.x > Xrange) //if the position of the object is greater than the right border, it's position will be the limit.
         {
@@ -34,7 +34,7 @@ public class BORDERS : MonoBehaviour
         if (position.z < -Zrange) //if the position of the GO is lesser than the back border, it's position will be the limit.
         {
             transform.position = new Vector3(position.x, position.y, -Zrange);
-        }
+        }*/
 
     } 
 }
