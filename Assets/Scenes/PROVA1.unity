@@ -416,14 +416,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29c8c72a3c799443ae1bab6ee00bcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 1074584148}
-  - {fileID: 227797647}
-  - {fileID: 333642095}
-  - {fileID: 2077143459}
-  - {fileID: 2030304568}
-  - {fileID: 694495747}
-  - {fileID: 694357549}
   points: 0
 --- !u!65 &213334178
 BoxCollider:
@@ -438,16 +430,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1503094, y: 1.0759714, z: 1.0797011}
   m_Center: {x: 0.035841167, y: 0.0034441948, z: -0.00618726}
---- !u!1 &227797647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4970460122526755903, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
-  m_PrefabInstance: {fileID: 204777644}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &333642095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4970460122526755903, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
-  m_PrefabInstance: {fileID: 455357227}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &455357227
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,20 +483,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4970460122526755903, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
       propertyPath: m_Name
-      value: flower (1)
+      value: 'flower '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
---- !u!1 &694357549 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4044376792431320937, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
-  m_PrefabInstance: {fileID: 1720098600}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &694495747 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4044376792431320937, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
-  m_PrefabInstance: {fileID: 1955034494}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956891749
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,11 +558,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1074584148 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1411356992296491676, guid: bf2b94cedc12cf34198a032a8a2e1f7b, type: 3}
-  m_PrefabInstance: {fileID: 1482228697}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127579198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -644,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4970460122526755903, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
       propertyPath: m_Name
-      value: flower (2)
+      value: 'flower '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
@@ -762,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044376792431320937, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
       propertyPath: m_Name
-      value: polen (2)
+      value: 'polen '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
@@ -1186,17 +1153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044376792431320937, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
       propertyPath: m_Name
-      value: polen (1)
+      value: 'polen '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
---- !u!1 &2030304568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4044376792431320937, guid: 69db597b3abe64c4fa37b0ed1912adfd, type: 3}
-  m_PrefabInstance: {fileID: 1873644625}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2077143459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4970460122526755903, guid: 2c2794e651f15754895072b2dba8e4f4, type: 3}
-  m_PrefabInstance: {fileID: 1127579198}
-  m_PrefabAsset: {fileID: 0}
