@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7048947521379575791}
   - component: {fileID: 1558900177504235337}
   m_Layer: 0
-  m_Name: ForestMushroom01
+  m_Name: Mushroom_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

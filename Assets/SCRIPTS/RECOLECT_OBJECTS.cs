@@ -7,8 +7,11 @@ public class RECOLECT_OBJECTS : MonoBehaviour
     //we asign the script to the player in order to detect collisions
     
     [SerializeField] private int points;
-    private int flowerPoints = 2;
-    private int polenPoints = 5;
+    private int B_points = 3;
+    private int R_points = 5;
+    private int O_points = 2;
+    private int P_points = 7;
+
     private float flowerRANGE;
 
     private void OnTriggerEnter(Collider other)
@@ -21,17 +24,31 @@ public class RECOLECT_OBJECTS : MonoBehaviour
             Destroy(gameObject); //destroy player
         }
 
-        if (other.gameObject.name.Contains("flower")) //if the player collide with the FLOWER;
+        if (other.gameObject.name.Contains("Mushroom_B")) //if the player collide with the brown mushroom;
         {
             Destroy(other.gameObject);
-            points = points + flowerPoints;
+            points = points + B_points;
             Debug.Log($"TOTAL SCORE: {points}");
         }
 
-        if (other.gameObject.name.Contains("polen")) //if the player collide with the POLEN;
+        if (other.gameObject.name.Contains("Mushroom_R")) //if the player collide with the red mushroom;
         {
             Destroy(other.gameObject);
-            points = points + polenPoints;
+            points = points + R_points;
+            Debug.Log($"TOTAL SCORE: {points}");
+        }
+
+        if (other.gameObject.name.Contains("Mushroom_O")) //if the player collide with the orange mushroom;
+        {
+            Destroy(other.gameObject);
+            points = points + O_points;
+            Debug.Log($"TOTAL SCORE: {points}");
+        }
+
+        if (other.gameObject.name.Contains("Mushroom_P")) //if the player collide with the purple mushroom;
+        {
+            Destroy(other.gameObject);
+            points = points + P_points;
             Debug.Log($"TOTAL SCORE: {points}");
         }
     }
