@@ -9,7 +9,7 @@ public class PLAYER_01 : MonoBehaviour
      * 2- rotació en horitzontal (fletxa dreta i esquerra)
      */
 
-    private float speed = 15f;
+    private float speed = 50f;
     private float turnSpeed = 100f;
     private float rotationInput;
     private float verticalInput;
