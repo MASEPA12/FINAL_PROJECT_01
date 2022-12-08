@@ -4,39 +4,47 @@ using UnityEngine;
 
 public class ZONES : MonoBehaviour
 {
-    public GameObject flower;
+    public GameObject[] objectsToRecolect;
+    private int recollectableIndex;
+    private BoxCollider zone1;
+    [SerializeField] private float y;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //if the left button's mouse is clicked will appear a flower inside the box collider
+        if (Input.GetMouseButtonDown(0))
+        {
+            RandomPosition();
+        }
     }
 
     Vector3 RandomPosition()
     {
-        BoxCollider = GetComponent<BoxCollider>();
+                //here we asign the components of the box collider to zone1
+        zone1 = GetComponent<BoxCollider>();  
 
-        float xlim = box.size.x / 2;
-        float ylim = box.size.y / 2;
-        float zlim = box.size.z / 2;
+                //asign each axis size of the box collider to a float variable exept y, because we need an especific high.
+        float xlim = zone1.size.x / 2;  
+        float zlim = zone1.size.z / 2;
 
-        float x = RandomPosition(xlim, ylim, zlim);
-        float y = RandomPosition(xlim, ylim, zlim);
-        float z = RandomPosition(xlim, ylim, zlim);
+                //then, we create a random number between the limit of each axis and asign it to a variable (x,y,z)
+        float x = Random.Range(-xlim/2,xlim/2); 
+        //float y = Random.Range(-ylim/2, ylim/2);
+        float z = Random.Range(-zlim/2, zlim/2);
 
-        Vector3 center = transfom.position;
+        //Debug.Log($"MIDES BOX: POSITIVE:{xlim/2}, {ylim/2},{zlim/2} NEGATIVE: {-xlim/2}, {-ylim/2},{-zlim/2} // COOREDENADES NEWobject---> {x},{y},{z}");    
+        Debug.Log($"MIDES BOX: POSITIVE:{xlim/2},{zlim/2} NEGATIVE: {-xlim/2},{-zlim/2} // COOREDENADES NEWobject---> {x},{z}");    
 
-        Instantiate(flower, center, Quaternion.identity);
+                //recollectableIndex will be a random number of the array in order to instantiate a random component of the array
+        recollectableIndex = Random.Range(0, objectsToRecolect.Length);
+
+        Vector3 GameObjectCentre = transform.position; //centre is the  zone1 position
+
+                //we instantiate a random recollectable in "new Vector3(x, y, z)".
+        Instantiate(objectsToRecolect[recollectableIndex], GameObjectCentre + new Vector3(x, y, z), Quaternion.identity);
+
 
         return new Vector3(x, y, z);
     }
-
      
 }
