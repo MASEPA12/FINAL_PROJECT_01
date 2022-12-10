@@ -11,13 +11,14 @@ public class RECOLECT_OBJECTS : MonoBehaviour
     private int R_points = 5;
     private int O_points = 2;
     private int P_points = 7;
+    private int FlowerPoints = 10;
 
     private float flowerRANGE;
 
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name.Contains("enemy")) //if the player collide with the ENEMY;
+        if (other.gameObject.name.Contains("BEAR")) //if the player collide with the ENEMY;
         {
             Debug.Log("GAME OVER");
             Time.timeScale = 0;
@@ -49,6 +50,13 @@ public class RECOLECT_OBJECTS : MonoBehaviour
         {
             Destroy(other.gameObject);
             points = points + P_points;
+            Debug.Log($"TOTAL SCORE: {points}");
+        }
+
+        if (other.gameObject.name.Contains("Flower")) //if the player collide with some flower;
+        {
+            Destroy(other.gameObject);
+            points = points + FlowerPoints;
             Debug.Log($"TOTAL SCORE: {points}");
         }
     }
