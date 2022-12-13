@@ -7301,9 +7301,10 @@ GameObject:
   - component: {fileID: 1198234637}
   - component: {fileID: 1198234644}
   - component: {fileID: 1198234643}
-  - component: {fileID: 1198234642}
   - component: {fileID: 1198234641}
   - component: {fileID: 1198234645}
+  - component: {fileID: 1198234647}
+  - component: {fileID: 1198234646}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -7403,18 +7404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 0
---- !u!114 &1198234642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1198234636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea3911e1256d774f8ba488fc4c9f7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1198234643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7454,6 +7443,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e1ddff98a28f043a2013e9c36cc9ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1198234646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198234636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43772a631b2c0bf4bb58966ba35fa8ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1198234647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198234636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea3911e1256d774f8ba488fc4c9f7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1211058643
@@ -10747,7 +10760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -211.21706
+      value: -120.5
       objectReference: {fileID: 0}
     - target: {fileID: 7292658344771522932, guid: f5b41ba4c79702547a89de7544b80656, type: 3}
       propertyPath: m_LocalRotation.w

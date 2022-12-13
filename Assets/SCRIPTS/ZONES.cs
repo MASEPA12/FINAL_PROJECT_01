@@ -9,30 +9,15 @@ public class ZONES : MonoBehaviour
     private BoxCollider zone1;
     [SerializeField] private float y;
 
-   // private float startDelay = 60f; //after 60 seconds will appear new recollectables every 45 seconds (in order to facilitate the game)
-    //private float spawnInterval = 45f;
+    private float startDelay = 60f; 
+    private float spawnInterval = 20f;
 
 
     private void Start()
     {
-        System.Threading.Thread.Sleep(45 * 1000);
-        RandomPosition();
-        //InvokeRepeating(RandomPosition(), startDelay);
-        /*if (Time.time == 4.1f)
-        {
-            RandomPosition();
-            yield return new WaitForSeconds(45f);  
-        }*/
+        //after 60 seconds will appear new recollectables every 20 seconds 
+        InvokeRepeating("RandomPosition", startDelay,  spawnInterval);
     }
-
-    private void Update()
-    {
-        Debug.Log((float)Time.time);
-        
-        //si es temps és major que 4.001 i menor que 4.002
-       
-    }
-    
 
 
     Vector3 RandomPosition()
