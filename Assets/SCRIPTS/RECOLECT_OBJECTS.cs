@@ -15,6 +15,15 @@ public class RECOLECT_OBJECTS : MonoBehaviour
 
     private float flowerRANGE;
 
+    private void Start()
+    {
+        if(points >= 300)
+        {
+            Time.timeScale = 0;
+            Debug.Log($"YOU HAVE WON 300 POINTS, CONGRATULATIONS YOU WON!!! gg");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 

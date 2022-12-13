@@ -12,7 +12,7 @@ public class ZONES : MonoBehaviour
     private void Update()
     {
         //CANVIAR AIXÒ PER: SI ES PLAYER TE 10 PUNTS...
-        if (Input.GetMouseButtonDown(0))
+        if (Time.time == 45f)
         {
             RandomPosition();
         }
