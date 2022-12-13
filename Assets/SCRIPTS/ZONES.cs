@@ -9,14 +9,31 @@ public class ZONES : MonoBehaviour
     private BoxCollider zone1;
     [SerializeField] private float y;
 
-    private void Update()
+   // private float startDelay = 60f; //after 60 seconds will appear new recollectables every 45 seconds (in order to facilitate the game)
+    //private float spawnInterval = 45f;
+
+
+    private void Start()
     {
-        //CANVIAR AIXÒ PER: SI ES PLAYER TE 10 PUNTS...
-        if (Time.time == 45f)
+        System.Threading.Thread.Sleep(45 * 1000);
+        RandomPosition();
+        //InvokeRepeating(RandomPosition(), startDelay);
+        /*if (Time.time == 4.1f)
         {
             RandomPosition();
-        }
+            yield return new WaitForSeconds(45f);  
+        }*/
     }
+
+    private void Update()
+    {
+        Debug.Log((float)Time.time);
+        
+        //si es temps és major que 4.001 i menor que 4.002
+       
+    }
+    
+
 
     Vector3 RandomPosition()
     {
@@ -30,10 +47,8 @@ public class ZONES : MonoBehaviour
                 //then, we create a random number between the limit of each axis and asign it to a variable (x,y,z)
         float x = Random.Range(-xlim/2,xlim/2); 
         float z = Random.Range(-zlim/2, zlim/2);
-
-        //SI NECESSIT SABER SA POSICIÓ DE LO QUE APAREIX PER FER PROVES: Debug.Log($"MIDES BOX: POSITIVE:{xlim/2},{zlim/2} NEGATIVE: {-xlim/2},{-zlim/2} // COOREDENADES NEWobject---> {x},{z}");    
                 
-        //recollectableIndex will be a random number of the array in order to instantiate a random component of the array
+                //recollectableIndex will be a random number of the array in order to instantiate a random component of the array
         recollectableIndex = Random.Range(0, objectsToRecolect.Length);
 
         Vector3 GameObjectCentre = transform.position; //centre is the  zone1 position
