@@ -14,12 +14,12 @@ public class INSTRUCTIONS : MonoBehaviour
     void Update()
     {
         //if the player presses the key A (on the controller or on the keyboard) the instructions will be shown
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             introduction();
         }
         //if the player presses the key Y (on controller) or W on the keyboard, the game will start
-        if (Input.GetKey(KeyCode.Y) || Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.W))
         {
             Time.timeScale = 1;
         }
